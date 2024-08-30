@@ -1,20 +1,15 @@
 name: CI with coverage data
 
 on:
-  pull_request:
-    branches: [main]
+  push:
 
 env:
   MIX_ENV: "test"
 
 jobs:
   ci-run:
-    runs-on: [docker]
+    runs-on: [ubuntu-22.04]
     name: Elixir CI
-    strategy:
-      matrix:
-        otp: ["26.2"]
-        elixir: ["1.16"]
 
     steps:
       - name: Checkout code
@@ -23,8 +18,8 @@ jobs:
       - name: Setup Erlang/OTP with Elixir and mix
         uses: erlef/setup-beam@v1
         with:
-          otp-version: ${{matrix.otp}}
-          elixir-version: ${{matrix.elixir}}
+          otp-version: "26.2"
+          elixir-version: "1.16"
 
       - run: "mix deps.get"
       - run: "mix compile"
