@@ -24,3 +24,6 @@ cobertura_ars-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Coverage file
+/coverage.xml
