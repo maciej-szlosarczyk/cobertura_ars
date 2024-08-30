@@ -17,4 +17,9 @@ defmodule CoberturaArs.Application do
     opts = [strategy: :one_for_one, name: CoberturaArs.Supervisor]
     Supervisor.start_link(children, opts)
   end
+
+  def not_tested(arg) do
+    dbg(arg)
+    :flunk
+  end
 end
