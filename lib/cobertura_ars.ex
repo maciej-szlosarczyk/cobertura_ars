@@ -15,4 +15,7 @@ defmodule CoberturaArs do
   def hello do
     :world
   end
+
+  def tested, do: :tested
+  def not_tested, do: :not_tested
 end

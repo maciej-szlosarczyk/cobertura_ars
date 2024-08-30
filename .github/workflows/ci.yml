@@ -1,7 +1,7 @@
 name: CI with coverage data
 
 on:
-  push:
+  pull_request:
 
 env:
   MIX_ENV: "test"
@@ -24,3 +24,12 @@ jobs:
       - run: "mix deps.get"
       - run: "mix compile"
       - run: "mix test --cover"
+
+      - name: Print cobertura report
+        uses: 5monkeys/cobertura-action@v14
+        with:
+          path: coverage.xml
+          minimum_coverage: 80
+          only_changed_files: true
+          show_missing: true
+          skip_covered: false
