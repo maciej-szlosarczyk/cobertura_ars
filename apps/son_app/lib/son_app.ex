@@ -17,10 +17,9 @@ defmodule SonApp do
   end
 
   def not_tested(arg) do
-    if arg do
-      :tested
-    else
-      :not_tested
+    case arg do
+      x when x in [nil, false] -> :not_tested
+      _ -> :tested
     end
   end
 end
