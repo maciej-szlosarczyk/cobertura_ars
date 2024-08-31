@@ -1,4 +1,4 @@
-defmodule CoberturaArs.Application do
+defmodule SonApp.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,18 +8,13 @@ defmodule CoberturaArs.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: CoberturaArs.Worker.start_link(arg)
-      # {CoberturaArs.Worker, arg}
+      # Starts a worker by calling: SonApp.Worker.start_link(arg)
+      # {SonApp.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: CoberturaArs.Supervisor]
+    opts = [strategy: :one_for_one, name: SonApp.Supervisor]
     Supervisor.start_link(children, opts)
-  end
-
-  def not_tested(arg) do
-    dbg(arg)
-    :flunk
   end
 end

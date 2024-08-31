@@ -28,8 +28,9 @@ jobs:
       - name: Print cobertura report
         uses: 5monkeys/cobertura-action@v14
         with:
-          path: coverage.xml
+          path: apps/*/coverage.xml
           minimum_coverage: 80
           only_changed_files: true
           show_missing: true
           skip_covered: false
+          link_missing_lines: true
