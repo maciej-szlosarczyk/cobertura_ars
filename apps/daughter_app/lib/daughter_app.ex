@@ -1,6 +1,6 @@
-defmodule CoberturaArs do
+defmodule DaughterApp do
   @moduledoc """
-  Documentation for `CoberturaArs`.
+  Documentation for `DaughterApp`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule CoberturaArs do
 
   ## Examples
 
-      iex> CoberturaArs.hello()
+      iex> DaughterApp.hello()
       :world
 
   """
