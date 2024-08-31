@@ -25,7 +25,7 @@ jobs:
       - run: "mix compile"
       - run: "mix test --cover"
 
-      - name: Print cobertura report
+      - name: Son coverage
         uses: 5monkeys/cobertura-action@v14
         with:
           path: apps/son_app/coverage.xml
@@ -35,7 +35,7 @@ jobs:
           skip_covered: false
           link_missing_lines: true
 
-      - name: Print cobertura report
+      - name: Daughter coverage
         uses: 5monkeys/cobertura-action@v14
         with:
           path: apps/daughter_app/coverage.xml
