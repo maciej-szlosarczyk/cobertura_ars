@@ -32,8 +32,8 @@ jobs:
           minimum_coverage: 80
           report_name: "apps/son_app coverage"
           show_missing: true
-          skip_covered: false
           link_missing_lines: true
+          link_missing_lines_source_dir: apps/son_app
 
       - name: Daughter coverage
         uses: 5monkeys/cobertura-action@v14
@@ -42,5 +42,5 @@ jobs:
           report_name: "apps/daughter_app coverage"
           minimum_coverage: 80
           show_missing: true
-          skip_covered: false
           link_missing_lines: true
+          link_missing_lines_source_dir: apps/daughter_app
