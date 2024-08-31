@@ -31,7 +31,6 @@ jobs:
           path: apps/son_app/coverage.xml
           minimum_coverage: 80
           report_name: "apps/son_app coverage"
-          only_changed_files: true
           show_missing: true
           skip_covered: false
           link_missing_lines: true
@@ -42,7 +41,6 @@ jobs:
           path: apps/daughter_app/coverage.xml
           report_name: "apps/daughter_app coverage"
           minimum_coverage: 80
-          only_changed_files: true
           show_missing: true
           skip_covered: false
           link_missing_lines: true
